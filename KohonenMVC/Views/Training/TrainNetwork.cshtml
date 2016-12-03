@@ -1,0 +1,18 @@
+﻿@Model KohonenMVC.Models.TrainingModel
+
+@{
+    ViewBag.Title = "Training results";
+}
+
+<h2>Training results</h2>
+<h3>Adaptive height: @Model.adaptiveHeight</h3>
+<h3>Learning parameter: @Model.learningParameter</h3>
+<h3>Amount of iterations: @Model.numberOfIterations</h3>
+<h3>Kohonen layer length: @Model.kohonenLayerLength</h3>
+<h3>Kohonen layer width: @Model.kohonenLayerWidth</h3>
+<br>
+
+<img src="@Url.Action("GetBitmap", "Training")" />
+<img src="@Url.Action("WeightsChangeChart", "Training")" />
+
+
